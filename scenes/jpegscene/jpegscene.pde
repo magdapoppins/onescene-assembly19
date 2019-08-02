@@ -23,7 +23,21 @@ void draw (){
 }
 
 void keyPressed() {
-  if (key == CODED && keyCode == UP) {
-    counter += 1;
+  if (key == CODED) { 
+    if (keyCode == UP) {
+      ellipse(counterX, counterY, 180, 200);
+      counterY -= 10;
+    }
+    if (keyCode == DOWN) {
+      ellipse(counterX, counterY, 180, 200);
+      counterY += 10;
+    }
+    if (keyCode == LEFT) {
+      ellipse(counterX, counterY, 180, 200);
+      counterX -= 10;
+    }  
+    if (keyCode == RIGHT) {
+      ellipse(counterX, counterY, 180, 200);
+      counterX += 10;
+    }
   }
-}
